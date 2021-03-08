@@ -41,4 +41,14 @@ public class Chat extends HttpServlet {
 		out.println("</body>");
 		out.println("</html>");
 	}
+
+	@Override
+	protected void doPost(HttpServletRequest req, HttpServletResponse resp)
+			throws ServletException, IOException {
+		String action = req.getParameter("action");
+		String ligne = req.getParameter("ligne");
+		if(action.equals("submit"))
+			chatContent.append(ligne).append("\n");
+		this.doGet(req, resp);
+	}
 }
