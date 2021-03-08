@@ -30,6 +30,14 @@ public class Chat extends HttpServlet {
 		out.println("<pre>");
 		out.println(chatContent.toString());
 		out.println("</pre>");
+
+		// Formulaire
+		out.println("<form name=\"chatForm\" action=\"chat\" method=\"post\">");
+		out.println("<input type=\"text\" name=\"ligne\" value=\"\" />");
+		out.println("<input type=\"submit\" name=\"action\" value=\"submit\" />");
+		out.println("<input type=\"submit\" name=\"action\" value=\"refresh\" />");
+		out.println("</form>");
+
 		out.println("</body>");
 		out.println("</html>");
 	}
