@@ -14,7 +14,6 @@ import java.util.Date;
 public class Chat extends HttpServlet {
 	private static final long serialVersionUID = 197811968639586823L;
 	private StringBuffer chatContent;
-	private HttpSession session;
 
 	@Override
 	public void init() throws ServletException {
@@ -25,7 +24,7 @@ public class Chat extends HttpServlet {
 	@Override
 	protected void doGet(HttpServletRequest req, HttpServletResponse resp)
 			throws ServletException, IOException {
-		session = req.getSession();
+		HttpSession session = req.getSession();
 		if (session.getAttribute("user") == null){
 			RequestDispatcher dispatcher = req.getServletContext()
 					.getRequestDispatcher("/auth.jsp");
@@ -43,8 +42,10 @@ public class Chat extends HttpServlet {
 	protected void doPost(HttpServletRequest req, HttpServletResponse resp)
 			throws ServletException, IOException {
 		String action = req.getParameter("action");
+		HttpSession session;
 		switch (action) {
 			case "submit": {
+				session = req.getSession(false);
 				String ligne = req.getParameter("ligne");
 				String user = session.getAttribute("user").toString();
 				//vérifier qu'il ya du texte
@@ -64,6 +65,7 @@ public class Chat extends HttpServlet {
 			}
 			//deconnexion
 			case "logout": {
+				session = req.getSession(false);
 				String user = session.getAttribute("user").toString();
 				chatContent.append(getDate().toString()).append("\t").append(user).append(" a quitté le chat").append("\n");
 				session.setAttribute("user", null);
