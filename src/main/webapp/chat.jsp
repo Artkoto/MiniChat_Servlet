@@ -1,10 +1,3 @@
-<%--
-  Created by IntelliJ IDEA.
-  User: artkoto
-  Date: 08/03/2021
-  Time: 18:28
-  To change this template use File | Settings | File Templates.
---%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
 <head>
@@ -12,16 +5,16 @@
 </head>
 <body>
 <pre>
-    <%= request.getAttribute("content")  %>
+    <%=request.getAttribute("content") %>
 </pre>
 <%--Formulaire--%>
 <form name="chatForm" action="chat" method="post">
     <input type="text" name="ligne" value="" />
     <input type="submit" name="action" value="submit" />
     <input type="submit" name="action" value="refresh" />
-    </form>
+    <button type="submit" name="action" value="logout">LogOut</button>
+</form>
 
-</body>
-</html>
+
 </body>
 </html>
