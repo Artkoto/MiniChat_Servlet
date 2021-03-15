@@ -41,6 +41,8 @@ public class Chat extends HttpServlet {
 	@Override
 	protected void doPost(HttpServletRequest req, HttpServletResponse resp)
 			throws ServletException, IOException {
+		resp.setCharacterEncoding("UTF-8");
+		req.setCharacterEncoding("UTF-8");
 		String action = req.getParameter("action");
 		HttpSession session;
 		switch (action) {
@@ -74,6 +76,8 @@ public class Chat extends HttpServlet {
 		}
 		this.doGet(req, resp);
 	}
+
+
 
 	public Date getDate(){
 		return new Date();
