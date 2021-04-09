@@ -68,7 +68,7 @@ public class Chat extends HttpServlet {
 				String user = session.getAttribute("user").toString();
 				//vérifier qu'il ya du texte
 				if (!ligne.trim().equals(""))
-					chatContent.append(getDate().toString()).append("\t").append(user).append(":\t").append(ligne).append("\n");
+					chatContent.append(getDate().toString()).append("\t").append(user).append("\t").append(ligne).append("\n");
 				break;
 			}
 			//connexion

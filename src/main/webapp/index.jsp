@@ -2,9 +2,11 @@
 <html>
 <head>
 <title>Hello IPR</title>
+	<link rel="preconnect" href="https://fonts.gstatic.com">
+	<link href="https://fonts.googleapis.com/css2?family=Gorditas&family=Lobster&family=Londrina+Solid:wght@300;400;900&family=Merriweather+Sans:ital,wght@0,300;1,300&display=swap" rel="stylesheet">
 </head>
 <body>
-	<h1>Page de démo</h1>
+	<h1 style="font-family: 'Londrina Solid', cursive;">Page de démo</h1>
 
 	<p>Cette page est générée par la jsp : src/main/webapp/index.jsp</p>
 
@@ -22,7 +24,7 @@
 	<p>Vous êtes libre de modifier ces pages ou de les effacer si vous
 		le souhaitez. Même chose pour le fichier web.xml</p>
 
-	<h2>Hello World!</h2>
+	<h2  style="font-family: 'Londrina Solid', cursive;">Hello World!</h2>
 	<p>
 		Il est
 		<%=new Date()%>

@@ -17,7 +17,7 @@
 	</context-param>
 	<context-param>
 		<param-name>welcome</param-name>
-		<param-value>Bienvenue sur le chat. Soyez polis!</param-value>
+		<param-value>Bienvenue sur yaomiardchat. Soyez polis!</param-value>
 	</context-param>
 
 	<!-- Le code suivant n'est utile que si vous voulez 
