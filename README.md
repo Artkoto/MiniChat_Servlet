@@ -6,3 +6,10 @@
 
 - L'erreur 405 explique que la méthode HTTP GET n'est pas supportée par l'URL,
   car la méthode `doGet` de la servlet n'a pas été implémentée.
+  
+### Contenu
+### Formulaire
+## Partie 2 : Utilisation d'une JSP
+## Partie 3 : SESSIONS
+## Partie 4 : Configuration du message de bienvenue
+## Pour aller plus loin
