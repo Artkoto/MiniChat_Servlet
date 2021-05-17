@@ -1,6 +1,6 @@
-# TP6 : Les servlets
+#  Les servlets
 Yao-Arnaud Akoto, Anthony Amiard  
-[https://gitlab.istic.univ-rennes1.fr/aamiard/pr.tp.web](https://gitlab.istic.univ-rennes1.fr/aamiard/pr.tp.web)
+
 
 ## Partie 1 : Chat anonyme
 
